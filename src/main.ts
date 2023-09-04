@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core';
+import { MongooseModule } from '@nestjs/mongoose';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -6,6 +7,9 @@ async function bootstrap() {
 
   // configuracion de prefijo
   app.setGlobalPrefix('api/v2');
+
+  // referencia a nuestra bd
+  MongooseModule.forRoot('mongodb://localhost:27017/nest-pokemon'),
 
   await app.listen(3001);
 }
