@@ -16,7 +16,7 @@ export class PokemonService {
 
   ) {}
 
-
+  // crear un pokemon
   async create(createPokemonDto: CreatePokemonDto) {
     createPokemonDto.name = createPokemonDto.name.toLocaleLowerCase();
 
@@ -36,6 +36,7 @@ export class PokemonService {
     return `This action returns all pokemon`;
   }
 
+  // mostrar poken por nombre o mongo id
   async findOne(term: string) {
     
     let pokemon: Pokemon;
@@ -62,6 +63,7 @@ export class PokemonService {
     return pokemon;
   }
 
+  // actualizar pokemon
   async update( term: string, updatePokemonDto: UpdatePokemonDto) {
 
     const pokemon = await this.findOne( term );
@@ -77,6 +79,7 @@ export class PokemonService {
     }
   }
 
+  // eliminar pokemon
   async remove( id: string) {
     // const pokemon = await this.findOne( id );
     // await pokemon.deleteOne();
@@ -89,7 +92,7 @@ export class PokemonService {
     return;
   }
 
-
+  // metodo para manejar excepciones
   private handleExceptions( error: any ) {
     if ( error.code === 11000 ) {
       throw new BadRequestException(`Pokemon exists in db ${ JSON.stringify( error.keyValue ) }`);
