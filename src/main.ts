@@ -4,7 +4,8 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  app.setGlobalPrefix('api');
+  // configuracion de prefijo
+  app.setGlobalPrefix('api/v2');
 
   await app.listen(3001);
 }
