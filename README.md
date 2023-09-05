@@ -18,7 +18,12 @@ npm i -g @nest/cli
 docker-compose up -d
 
 ```
-5. Reconstruir la base de datos con la semilla
+5. Ejecutar
+```
+yarn start:dev
+
+```
+6. Reconstruir la base de datos con la semilla
 ```
 http://localhost:3001/api/v2/seed
 ```
@@ -27,3 +32,4 @@ http://localhost:3001/api/v2/seed
 * MongoDB
 * NestJS
 * Mongoose
+* Docker
