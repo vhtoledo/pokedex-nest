@@ -31,9 +31,9 @@ export class PokemonService {
   }
 
 
-
+  // mostrar todos los pokemon
   findAll() {
-    return `This action returns all pokemon`;
+    return this.pokemonModel.find();
   }
 
   // mostrar poken por nombre o mongo id
