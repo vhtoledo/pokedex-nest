@@ -23,7 +23,11 @@ docker-compose up -d
 yarn start:dev
 
 ```
-6. Reconstruir la base de datos con la semilla
+6. Clonar el archivo __.env.template__ y renombrar la copia a __.env__
+
+7. Llenar las variables de entorno definidas en __.env__
+
+8. Reconstruir la base de datos con la semilla
 ```
 http://localhost:3001/api/v2/seed
 ```
