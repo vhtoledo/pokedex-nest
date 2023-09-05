@@ -16,6 +16,7 @@ npm i -g @nest/cli
 4. Levantar la base de datos mediante docker
 ```
 docker-compose up -d
+
 ```
 5. Reconstruir la base de datos con la semilla
 ```
